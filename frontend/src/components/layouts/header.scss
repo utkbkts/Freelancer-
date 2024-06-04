@@ -1,0 +1,74 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/breakpoints.scss";
+.container-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 5px 5px 12px 10px rgba(0, 0, 0, 0.1);
+  z-index: 99999 !important;
+  background-color: white;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    @include md {
+      display: none;
+    }
+    .content-w {
+      background: #ffc448;
+      color: #6244c5;
+      height: 100%;
+      display: block;
+      padding: 15px;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      a {
+        color: black;
+        position: relative;
+        transition: all 1s ease-in-out;
+        overflow: hidden;
+        cursor: pointer;
+        .active {
+          color: $info;
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          right: 0;
+          width: 0;
+          background: #6244c5;
+          height: 2px;
+          transition: all 0.5s ease-in-out;
+          bottom: 0;
+        }
+        &:hover::after {
+          width: 100%;
+          left: 0;
+        }
+      }
+
+      span {
+        cursor: pointer;
+
+        &:hover {
+        }
+      }
+    }
+  }
+}
+
+.hidden-header {
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100px);
+}
+.visible-header {
+  transition: all 1s ease-in-out;
+  transform: translateY(0);
+}

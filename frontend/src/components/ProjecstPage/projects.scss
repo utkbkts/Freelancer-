@@ -1,0 +1,106 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/breakpoints.scss";
+.container-projects {
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 10rem;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include lg {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .__a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      li {
+        display: inline-block;
+        font-weight: 500;
+        color: #12141d;
+        cursor: pointer;
+        transition: 0.5s;
+        border-bottom: 2px solid transparent;
+        list-style: none;
+        &:hover {
+          border-bottom: 2px solid #7d67c3;
+        }
+        &.active {
+          border-bottom: 2px solid #7d67c3;
+        }
+      }
+    }
+  }
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 4rem;
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include md {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .img {
+      position: relative;
+      overflow: hidden;
+      &::after {
+        position: absolute;
+        top: 0;
+        content: "";
+        left: 0;
+        right: 0;
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+        bottom: 0;
+        height: 0;
+        opacity: 0.7;
+        border-radius: 10px;
+        background-color: #6244c5;
+      }
+      &:hover::after {
+        height: 100%;
+      }
+      .__a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        position: absolute;
+        bottom: 40px;
+        left: 20px;
+        z-index: 20;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.5s ease-in-out;
+
+        i {
+          border: 2px solid #f6be50;
+          color: #f6be50;
+          border-radius: 10px;
+          padding: 15px;
+          cursor: pointer;
+          transition: all 0.4s ease-in-out;
+          &:hover {
+            background: #f6be50;
+            color: black;
+          }
+        }
+      }
+      &:hover .__a {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+}

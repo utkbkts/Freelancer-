@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import "/src/styles/variables.scss";
+@import "/src/styles/breakpoints.scss";
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+::-webkit-scrollbar {
+  width: 20px; /* Yatay scroll çubuğu genişliği */
+  height: 20px; /* Dikey scroll çubuğu yüksekliği */
+}
+
+/* Scroll çubuğu arka plan rengi */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Scroll çubuğu okları ve gölge rengi */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Scroll çubuğu üzerine gelindiğinde rengi */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+.children {
+  flex-grow: 1;
+}
+
+.btn {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: $light;
+  font-style: normal;
+  border: none;
+  padding: 18px 20px;
+  border-radius: 10px;
+  background: $text;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: -100%;
+    top: 100%;
+    background: white;
+    opacity: 0.4;
+    width: 10px;
+    height: 200px;
+    transition: left 0.5s ease, top 0.5s ease; /* Geçiş efektinin eklenmesi */
+  }
+  &:hover::after {
+    left: 100%;
+    top: -100%;
+  }
+}
+
+// Loading
+
+.container-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}

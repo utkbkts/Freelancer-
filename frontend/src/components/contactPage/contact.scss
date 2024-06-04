@@ -1,0 +1,121 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/breakpoints.scss";
+.container-contact {
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 4rem;
+  .wrapper {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 2rem;
+    @include xl {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .__a {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      @include xl {
+        width: 100%;
+      }
+      h1 {
+        font-size: 22px;
+        line-height: 34px;
+        color: #12141d;
+        font-weight: 700;
+        font-style: normal;
+        @include sm {
+          font-size: 18px;
+        }
+      }
+      span {
+        font-size: 16px;
+        line-height: 24px;
+        color: #5a5a5a;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .__d {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        a {
+          background: #5e41bd;
+          border-radius: 5px;
+        }
+        i {
+          font-size: 25px;
+          padding: 7px;
+          color: white;
+        }
+      }
+    }
+
+    .__b {
+      flex: 1;
+      @include xl {
+        width: 100%;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        textarea {
+          height: 200px !important;
+          width: 600px !important;
+          @include xll {
+            width: 100% !important;
+          }
+        }
+        .__d {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+        .inputBox {
+          position: relative;
+          width: 100%;
+        }
+
+        .inputBox input,
+        .inputBox textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid black;
+          border-radius: 5px;
+          outline: none;
+          color: black;
+          font-size: 14px;
+        }
+
+        .inputBox span {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 10px;
+          pointer-events: none;
+          font-size: 12px;
+          border: 1px solid rgba(255, 255, 255, 0.25);
+          text-transform: uppercase;
+          transition: 0.2s ease;
+        }
+        .inputBox input:valid ~ span,
+        .inputBox input:focus ~ span {
+          color: black;
+          transform: translateX(10px) translateY(-30px);
+          font-size: 0.65em;
+          padding: 0 10px;
+          background-color: white;
+          border-left: 1px solid black;
+          border-right: 1px solid black;
+        }
+      }
+    }
+  }
+}
