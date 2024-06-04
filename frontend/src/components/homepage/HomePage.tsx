@@ -3,7 +3,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useState } from "react";
 import ModalVideo from "./ModalVideo";
 import { motion } from "framer-motion";
-import img from "../../img/utku2.jpg";
+import img from "../../img/utku.jpg";
 import img2 from "../../img/bg-header.png";
 import CV from "../../img/UtkuToygunBektasogluResume.pdf";
 const HomePage = () => {
