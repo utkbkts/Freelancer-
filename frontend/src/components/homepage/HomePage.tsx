@@ -4,6 +4,9 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useState } from "react";
 import ModalVideo from "./ModalVideo";
 import { motion } from "framer-motion";
+import img from "../../img/utku2.jpg";
+import img2 from "../../img/bg-header.png";
+import CV from "../../img/UtkuToygunBektasogluResume.pdf";
 const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
   const [typeEffect] = useTypewriter({
@@ -36,7 +39,7 @@ const HomePage = () => {
     <div className="container">
       <div className="wrapper">
         <div className="image">
-          <img src="/src/img/bg-header.png" alt="" />
+          <img src={img2} alt="" />
         </div>
         <div className="wrap-content">
           <motion.div
@@ -58,7 +61,9 @@ const HomePage = () => {
               </h1>
             </div>
             <div className="button">
-              <button className="btn">Download CV</button>
+              <a href={CV} download="UtkuBektasogluResume.pdf">
+                <button className="btn">Download CV</button>
+              </a>
               <div className="play" onClick={handlePlayClick}>
                 <i className="fa-solid fa-play"></i>
               </div>
@@ -73,7 +78,7 @@ const HomePage = () => {
             className="wrapper-text2"
           >
             <div className="wrapper">
-              <img src="/src/img/utku2.jpg" alt="" />
+              <img src={img} alt="" />
             </div>
           </motion.div>
         </div>

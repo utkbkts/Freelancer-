@@ -1,13 +1,14 @@
 import "./footer.scss";
 import { Link } from "react-router-dom";
+import img from "../../img/bg-icon.png";
 const Footer = () => {
   return (
     <>
       <footer className="container-footer">
         <div className="wrapper">
           <div className="__a">
-            <a href="https://flowbite.com/" className="">
-              <img src="/src/img/bg-icon.png" alt="Flowbite Logo" />
+            <a href="#" className="">
+              <img src={img} alt="Flowbite Logo" />
               <span className="">U(/\)B</span>
             </a>
             <ul className="">
