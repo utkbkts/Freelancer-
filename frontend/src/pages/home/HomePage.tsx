@@ -1,5 +1,3 @@
-"use client";
-
 import HomePage from "../../components/homepage/HomePage";
 import Loading from "../../components/loading/Loading";
 import MyProjects from "../MyProjects/MyProjects";

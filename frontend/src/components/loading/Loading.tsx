@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { Hypnosis } from "react-cssfx-loading";
 const variants = {

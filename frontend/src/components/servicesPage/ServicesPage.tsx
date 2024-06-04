@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import img from "../../img/bg-icon.png";
 import "./services.scss";

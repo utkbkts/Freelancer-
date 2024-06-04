@@ -1,4 +1,3 @@
-"use client";
 import "./home.scss";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useState } from "react";

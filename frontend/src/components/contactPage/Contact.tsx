@@ -1,4 +1,3 @@
-"use client";
 import { Link } from "react-router-dom";
 import "./contact.scss";
 import React, { useState } from "react";

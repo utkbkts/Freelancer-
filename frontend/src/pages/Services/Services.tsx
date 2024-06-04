@@ -1,5 +1,3 @@
-"use client";
-
 import ServicesPage from "../../components/servicesPage/ServicesPage";
 const Services = () => {
   return (

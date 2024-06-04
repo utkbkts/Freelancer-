@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { DataProject } from "../../utils/data";
 import "./projects.scss";
