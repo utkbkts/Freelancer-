@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import img from "../../img/bg-icon.png";
 import "./services.scss";
+import { Link } from "react-router-dom";
 const ServicesPage = () => {
   return (
     <>
@@ -9,7 +10,9 @@ const ServicesPage = () => {
           <h1>My Services</h1>
         </div>
         <div>
-          <button className="btn">Hire Me</button>
+          <Link to="https://www.linkedin.com/in/utku-bektasoglu/">
+            <button className="btn">Hire Me</button>
+          </Link>
         </div>
       </div>
       <div className="__a">

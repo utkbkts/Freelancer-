@@ -50,9 +50,7 @@ const AboutPage = () => {
                 to={"https://www.linkedin.com/in/utku-bektasoglu/"}
                 target="_blank"
               >
-                <button className="btn" style={{ padding: "10px 3rem" }}>
-                  Read More
-                </button>
+               
               </Link>
             </div>
           </div>
