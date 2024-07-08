@@ -31,16 +31,16 @@ const ProjectPage = () => {
             All Projects
           </li>
           <li
-            className={`${categoryType === "UI/UX design" && "active"}`}
-            onClick={() => setCategoryType("UI/UX design")}
+            className={`${categoryType === "ReactJS" && "active"}`}
+            onClick={() => setCategoryType("ReactJS")}
           >
-            UI/UX Design
+            ReactJS
           </li>
           <li
-            className={`${categoryType === "Graphic Design" && "active"}`}
-            onClick={() => setCategoryType("Graphic Design")}
+            className={`${categoryType === "NextJS" && "active"}`}
+            onClick={() => setCategoryType("NextJS")}
           >
-            Graphic Design
+            NextJS
           </li>
         </ul>
       </div>
@@ -60,7 +60,7 @@ const ProjectPage = () => {
                 <Link to={"/"}>
                   <i className="fa fa-eye"></i>
                 </Link>
-                <Link to={"/"}>
+                <Link target="_blank" to={`${item.github}`}>
                   <i className="fa fa-link"></i>
                 </Link>
               </div>

@@ -1,39 +1,46 @@
-import img1 from "../img/project-1.jpg";
-import img2 from "../img/project-2.jpg";
-import img3 from "../img/project-3.jpg";
-import img4 from "../img/project-4.jpg";
-import img5 from "../img/project-5.jpg";
-import img6 from "../img/project-6.jpg";
+import img1 from "../img/resim1.png";
+import img2 from "../img/resim2.png";
+import img3 from "../img/resim3.png";
+import img4 from "../img/resim4.png";
+import img5 from "../img/resim6.png";
+import img6 from "../img/resim5.png";
 
 export const DataProject = [
   {
     id: 1,
     img: img1,
-    type: "UI/UX design",
+    type: "ReactJS",
+    github: "https://github.com/utkbkts/MernProject-Add?tab=readme-ov-file",
   },
   {
     id: 2,
     img: img2,
-    type: "Graphic Design",
+    type: "NextJS",
+    github: "https://github.com/utkbkts/Blue-Hotel",
   },
   {
     id: 3,
     img: img3,
-    type: "UI/UX design",
+    type: "ReactJS",
+    github: "https://github.com/utkbkts/shopit",
   },
   {
     id: 4,
     img: img4,
-    type: "Graphic Design",
+    type: "ReactJS",
+    github: "https://github.com/utkbkts/Portfolio-dynamic-admin-panel-web-site",
   },
   {
     id: 5,
     img: img5,
-    type: "UI/UX design",
+    type: "ReactJS",
+    github:
+      "https://github.com/utkbkts/Comprehensive-budget-control-application",
   },
   {
     id: 6,
     img: img6,
-    type: "Graphic Design",
+    type: "ReactJS",
+    github: "https://github.com/utkbkts/Hotel-Reservation",
   },
 ];
